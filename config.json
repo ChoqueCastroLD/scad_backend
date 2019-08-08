@@ -1,0 +1,11 @@
+{
+    "database": {
+        "host": "127.0.0.1:3306",
+        "user": "root",
+        "password": "",
+        "name": "asis"
+    },
+    "app": {
+        "port": 3000
+    }
+}

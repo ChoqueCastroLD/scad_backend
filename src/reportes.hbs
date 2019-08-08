@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <h1>Reportes:</h1>
+                            </td>
+                            <td><img class="logo" width="50px" src="https://intranet.senati.edu.pe/images/senati.png"
+                                    style="" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3>Fecha: {{fecha}}</h3>
+                            </td>
+                        </tr>
+                    </table class="table">
+                </td>
+            </tr>
+            <tr class="information ">
+                <td colspan="2 ">
+                    <table class=" table">
+                        <tr class="heading ">
+                            {{#each campos}}
+                            <td>
+                                {{name}}
+
+                            </td>
+                            {{/each}}
+                        </tr>
+
+                        {{#each datos}}
+                        <tr class="item">
+                            {{#each this}}
+                            <td>
+                                {{#if this}}
+                                {{this}}
+                                {{else}}
+                                N/A
+                                {{/if}}
+                            </td>
+                            {{/each}}
+                        </tr>
+                        {{/each}}
+
+                    </table>
+    </div>
+</body>
+
+</html>
